@@ -22,13 +22,13 @@
     <!-- End Navbar -->
 
     <div class="container-projek">
-        <form onsubmit="addData()"">
-            <h1 class="title-projek">ADD MY PROJECT</h1>
+        <form onsubmit="addData(event)"">
+        <h1 class="title-projek">ADD MY PROJECT</h1>
 
             <!-- Project Name -->
             <div class="projek space">
                 <label for="">Project Name</label>
-                <input type="text" id="title-project">
+                <input type="text" id="input-title">
             </div>
 
             <!-- Start Date && End Date -->
@@ -46,7 +46,7 @@
             <!-- Description -->
             <div class="description space">
                 <label for="">Description</label>
-                <textarea name="" id="content"></textarea>
+                <textarea name="" id="input-content"></textarea>
             </div>
 
 
@@ -55,19 +55,19 @@
                 <label for="">Technologies</label>
                 <div class="container-checkbox">
                     <div class="card-checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" id="nodeJs">
                         <label for="" class="name-card-checkbox">Node Js</label>
                     </div>
                     <div class="card-checkbox">
-                        <label for="" class="name-card-checkbox">Next Js</label>
-                        <input type="checkbox">
+                        <input type="checkbox" id="javascript">
+                        <label for="" class="name-card-checkbox">JavaScript</label>
                     </div>
                     <div class="card-checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" id="reactJs">
                         <label for="" class="name-card-checkbox">React Js</label>
                     </div>
                     <div class="card-checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" id="typeScript">
                         <label for="" class="name-card-checkbox">TypeScript</label>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
             <!-- Upload Image -->
             <div class="upload space">
                 <label for="">Upload Image</label>
-                <input type="file" id="upload">
+                <input type="file" id="input-upload">
             </div>
 
             <button class="button-profil" type="submit">Submit</button>
@@ -85,9 +85,9 @@
     </div>
     <div class="container-myproject">
         <h1 class="title-myproject">MY PROJECT</h1>
-        <div class="content-myproject">
+        <div id="content" class="content-myproject">
             <!-- Start JS -->
-            <div class="card-myproject">
+            <!-- <div class="card-myproject">
                 <img src="img/myFoto.jpg" alt="">
                 <h3>Dumbways</h3>
                 <p>durasi: 3bulan</p>
@@ -101,7 +101,7 @@
                     <button>edit</button>
                     <button>delete</button>
                 </div>
-            </div>
+            </div> -->
             <!-- End JS -->
         </div>
     <div>

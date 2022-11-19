@@ -28,16 +28,16 @@ function onInput(){
 }
 
 let input = (id, serial) => {
-function success() {
-    errorMsg[serial].innerHTML = "";
-    id.style.border = "2.5px solid #6366f1";
-}
+    function success() {
+        errorMsg[serial].innerHTML = "";
+        id.style.border = "2.5px solid #6366f1";
+    }
 
-if(id.value.trim() !== ""){
-    return success()
-}else{
-    return
-}
+    if(id.value.trim() !== ""){
+        return success()
+    }else{
+        return
+    }
 }
 
 let engine = (id, serial, warning) => {
@@ -45,18 +45,16 @@ let engine = (id, serial, warning) => {
 function fail() {
     errorMsg[serial].innerHTML = warning;
     id.style.border = "2.5px solid #e11d48"
-
 }
 function success() {
     errorMsg[serial].innerHTML = "";
     id.style.border = "2.5px solid #6366f1";
-
 }
 
 if(id.value.trim() === ""){
     return fail()
 } else if(id.value.trim() !== ""){
-    success()
+    return success()
 }  
 
 if(namaId('username').value && namaId('email').value && namaId('phone').value && namaId('subject').value && namaId('message').value !== ""){
@@ -64,7 +62,7 @@ if(namaId('username').value && namaId('email').value && namaId('phone').value &&
 }
 
 function emailTo(){
-    let emailReciver = "rianllauo@gmail.com"
+    let emailReciver = "khafidz225@gmail.com"
     let link = document.createElement('a')
     link.href = `mailto: ${emailReciver}?subject=${subject.value}&body=Hallo nama saya ${username.value}, ${message.value}, silahkan kontak saya di nomer ${phone.value}`
     link.click()
